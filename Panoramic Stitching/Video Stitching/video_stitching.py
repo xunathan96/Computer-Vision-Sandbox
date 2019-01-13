@@ -5,18 +5,6 @@ from frame_stitching import stitch_frames
 cap1 = cv2.VideoCapture('adjacent_videos/school - left.mp4')
 cap2 = cv2.VideoCapture('adjacent_videos/school - right.mp4')
 
-'''
-# Get Frame Size + FPS for current videos
-width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps = int(cap.get(cv2.CAP_PROP_FPS))
-framesize = (width, height)
-
-# fourcc = cv2.VideoWriter_fourcc(*'H264')    #AVC1
-# VideoWriter(output file name, fourcc code, fps, frame size)
-out = cv2.VideoWriter('output.mp4', -1, fps, framesize)
-'''
-
 framesize = (1920, 1080)
 fps = 30
 out = cv2.VideoWriter('stitched_video/stitched_output.mp4', -1, fps, framesize)
